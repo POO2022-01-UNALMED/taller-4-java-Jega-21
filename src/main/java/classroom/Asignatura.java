@@ -10,36 +10,34 @@ public class Asignatura {
 
     Asignatura() {
         this("Sin nombre",Tipo.FUNDAMENTACION);
-        this(0);
     }
 
-    Asignatura(int codigoInterno,Tipo tipo) {
-        this("Sin nombre", codigoInterno, 0,tipo);
+    Asignatura(short codigoInterno,Tipo tipo) {
+        this("Sin nombre", codigoInterno, 0, tipo);
     }
 
     Asignatura(int codigoExterno,Tipo tipo) {
-        this("Sin nombre", 0, codigoExterno,tipo);
+        this("Sin nombre", short(0), codigoExterno, tipo);
     }
 
     Asignatura(String nombre, Tipo tipo) {
-        this(nombre, 0, 0,tipo);
+        this(nombre, short(0), 0, tipo);
     }
 
-    Asignatura(String nombre, int codigoInterno, int codigoExterno,Tipo tipo) {
+    Asignatura(String nombre, short codigoInterno, int codigoExterno,Tipo tipo) {
         this.nombre = nombre;
         this.codigoInterno = codigoInterno;
         this.codigoExterno = codigoExterno;
-        this.tipo = tipo;
     }
 
-    void cambiarDatos(int codigoInterno, int codigoExterno, String nombre,Tipo tipo) {
+    void cambiarDatos(short codigoInterno, int codigoExterno, String nombre,Tipo tipo) {
         this.codigoInterno = codigoInterno;
         this.codigoExterno = codigoExterno;
         this.nombre = nombre;
         this.tipo = tipo;
     }
 
-    void cambiarDatos(int codigoInterno) {
+    void cambiarDatos(short codigoInterno) {
         this.codigoInterno = codigoInterno;
     }
 
@@ -51,11 +49,11 @@ public class Asignatura {
         this.nombre = nombre;
     }
 
-    public void setCodigoInterno(int codigoInterno) {
+    public void setCodigoInterno(short codigoInterno) {
         this.codigoInterno = codigoInterno;
     }
     
     public void setCodigoInterno(double codigoInterno) {
-        this.codigoInterno = (int) codigoInterno;
+        this.codigoInterno = (short) codigoInterno;
     }
 }
